@@ -21,6 +21,7 @@ const winpat=[
 
 const showWinner=(winner)=>{
     msg.innerText=`Winner is, ${winner}`;
+    msg.classList.add("winning-message");
     msgcontainer.classList.remove("hide");
 }
 
@@ -74,6 +75,7 @@ reset.addEventListener("click",()=>{
     });
     turnO=true;
     endisableBoxes();
+    msg.classList.remove("winning-message");
     msgcontainer.classList.add("hide");
 })
 
@@ -83,6 +85,7 @@ newGameBtn.addEventListener("click",()=>{
     });
     turnO=true;
     endisableBoxes();
+    msg.classList.remove("winning-message");
     msgcontainer.classList.add("hide");
 })
 
